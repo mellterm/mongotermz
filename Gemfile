@@ -9,6 +9,8 @@ end
 
 gem "heroku"
 
+gem "mongoid", ">= 3.0.3"
+
 gem 'jquery-rails'
 
 gem "devise", ">= 2.1.2"
@@ -29,5 +31,5 @@ end
 group :development, :test do
 	gem "rspec-rails", ">= 2.11.0"
 	gem "factory_girl_rails", ">= 4.0.0"
-	gem "mongoid", ">= 3.0.3"
+	
 end
