@@ -43,7 +43,7 @@ module Mongotermz
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
+    config.filter_parameters += [:password, :password_confirmation]
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
@@ -61,8 +61,17 @@ module Mongotermz
 
     # Enable the asset pipeline
     config.assets.enabled = true
-
+    ## fix for heroku
+    config.assets.initialize_on_precompile = false
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+
+    ## do not use rspec in views helpers
+    config.generators do |g|
+        g.view_specs false
+        g.helper_specs false
+    end
+
   end
 end
