@@ -78,12 +78,8 @@ test:
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
-<% if ENV['MONGOHQ_URL'] %>
-  production:
+production:
   sessions:
-  default:
-  uri: <%= ENV['MONGOHQ_URL'] %>
-  options:
-    skip_version_check: true
-    safe: true
-<% end %>
+    default:
+      #edit uri with your user name and password
+      uri: <%= ENV["MONGOTERMZ_URI"] %>
