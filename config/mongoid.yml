@@ -82,4 +82,7 @@ production:
   sessions:
     default:
       #edit uri with your user name and password
-      uri: <%= ENV["MONGOHQ_URL"] %>
+      uri: "mongodb://heroku:fab767f76868bdd3aeec6f98d75b70f4@linus.mongohq.com:10093/app11484397"
+      options:
+        skip_version_check: true
+        safe: true
