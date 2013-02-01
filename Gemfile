@@ -9,6 +9,8 @@ group :assets do
 end
 
 gem "heroku"
+gem 'thin'
+gem 'figaro'
 
 gem "mongoid", ">= 3.0.3"
 
