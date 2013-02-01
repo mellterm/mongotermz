@@ -82,4 +82,4 @@ production:
   sessions:
     default:
       #edit uri with your user name and password
-      uri: <%= ENV["MONGOTERMZ_URI"] %>
+      uri: <%= ENV["MONGOHQ_URL"] %>
